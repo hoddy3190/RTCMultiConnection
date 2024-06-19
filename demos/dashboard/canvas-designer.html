@@ -499,7 +499,7 @@ document.getElementById('btn-chat-message').onclick = function() {
     });
 };
 
-
+/*
 var recentFile;
 document.getElementById('btn-attach-file').onclick = function() {
     var file = new FileSelector();
@@ -525,6 +525,7 @@ function getFileHTML(file) {
     }
     return attachment;
 }
+*/
 
 function getFullName(userid) {
     var _userFullName = userid;
@@ -534,6 +535,7 @@ function getFullName(userid) {
     return _userFullName;
 }
 
+/*
 connection.onFileEnd = function(file) {
     var html = getFileHTML(file);
     var div = progressHelper[file.uuid].div;
@@ -559,7 +561,7 @@ connection.onFileEnd = function(file) {
         div.innerHTML = '<b>' + getFullName(file.userid) + ':</b><br>' + html;
     }
 };
-
+*/
 
 // to make sure file-saver dialog is not invoked.
 connection.autoSaveToDisk = false;
