@@ -360,6 +360,7 @@ connection.onmessage = function(event) {
 // extra code
 
 connection.onstream = function(event) {
+    /*
     if (event.stream.isScreen && !event.stream.canvasStream) {
         $('#screen-viewer').get(0).srcObject = event.stream;
         $('#screen-viewer').hide();
@@ -380,7 +381,9 @@ connection.onstream = function(event) {
         var otherVideos = document.querySelector('#other-videos');
         otherVideos.appendChild(event.mediaElement);
     }
+    */
 
+    // これを消すとRoomOwnerじゃない人の画面にビデオが映る
     connection.onUserStatusChanged(event);
 };
 
