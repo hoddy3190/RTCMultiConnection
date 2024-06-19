@@ -499,6 +499,7 @@ document.getElementById('btn-chat-message').onclick = function() {
     });
 };
 
+
 var recentFile;
 document.getElementById('btn-attach-file').onclick = function() {
     var file = new FileSelector();
@@ -559,11 +560,13 @@ connection.onFileEnd = function(file) {
     }
 };
 
+
 // to make sure file-saver dialog is not invoked.
 connection.autoSaveToDisk = false;
 
 var progressHelper = {};
 
+/*
 connection.onFileProgress = function(chunk, uuid) {
     var helper = progressHelper[chunk.uuid];
     helper.progress.value = chunk.currentPosition || chunk.maxChunks || helper.progress.max;
@@ -598,6 +601,7 @@ connection.onFileStart = function(file) {
     conversationPanel.scrollTop = conversationPanel.clientHeight;
     conversationPanel.scrollTop = conversationPanel.scrollHeight - conversationPanel.scrollTop;
 };
+*/
 
 function updateLabel(progress, label) {
     if (progress.position == -1) return;
