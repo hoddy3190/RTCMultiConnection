@@ -386,7 +386,7 @@ connection.onstream = function(event) {
     // これを消すとRoomOwnerじゃない人の画面にビデオが映る
     connection.onUserStatusChanged(event);
 };
-
+/*
 connection.onstreamended = function(event) {
     var video = document.querySelector('video[data-streamid="' + event.streamid + '"]');
     if (!video) {
@@ -401,7 +401,7 @@ connection.onstreamended = function(event) {
         video.style.display = 'none';
     }
 };
-
+*/
 var conversationPanel = document.getElementById('conversation-panel');
 
 /*
