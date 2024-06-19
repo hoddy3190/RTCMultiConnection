@@ -224,6 +224,7 @@ var designer = new CanvasDesigner();
 designer.widgetHtmlURL = '/node_modules/canvas-designer/widget.html';
 designer.widgetJsURL = '/node_modules/canvas-designer/widget.min.js'
 
+// これを消すと、新しく入ってきた人も最新の描画が見れないし、そもそも同期が効かなくなる
 designer.addSyncListener(function(data) {
     connection.send(data);
 });
