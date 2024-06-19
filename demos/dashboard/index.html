@@ -525,7 +525,7 @@ function updateListOfRooms(rooms) {
         else {
           html += '<td><button class="btn join-room" data-roomid="' + room.sessionid + '" data-password-protected="' + (room.isPasswordProtected === true ? 'true' : 'false') +'">Join</button></td>';
         }
-        
+
         $(tr).html(html);
         $('#rooms-list').append(tr);
 
@@ -615,8 +615,8 @@ function joinAHiddenRoom(roomid) {
 
 function openCanvasDesigner() {
     $('#startRoomModel').modal('hide');
-    var href = location.href + 'canvas-designer.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
-    
+    var href = location.href + '/../canvas-designer.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
+
     if(!!connection.password) {
       href += '&password=' + connection.password;
     }
@@ -709,7 +709,7 @@ $('#btn-create-room').click(function() {
       }
 
       connection.password = roomPassword;
-    }    
+    }
 
     var initialHTML = $('#btn-create-room').html();
 
