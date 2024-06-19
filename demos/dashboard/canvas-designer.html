@@ -697,6 +697,7 @@ function addStreamStopListener(stream, callback) {
     });
 }
 
+/*
 function replaceTrack(videoTrack, screenTrackId) {
     if (!videoTrack) return;
     if (videoTrack.readyState === 'ended') {
@@ -725,7 +726,7 @@ function replaceTrack(videoTrack, screenTrackId) {
         });
     });
 }
-
+*/
 function replaceScreenTrack(stream) {
     stream.isScreen = true;
     stream.streamid = stream.id;
