@@ -304,6 +304,7 @@ connection.onclose = connection.onerror = connection.onleave = function(event) {
 };
 
 connection.onmessage = function(event) {
+    /*
     if(event.data.showMainVideo) {
         // $('#main-video').show();
         $('#screen-viewer').css({
@@ -344,12 +345,15 @@ connection.onmessage = function(event) {
         }
         return;
     }
+    */
 
+    // 新しく入ってきたユーザーに描画している画面を見せるためにこの処理が必要
     if (event.data === 'plz-sync-points') {
         designer.sync();
         return;
     }
 
+    // 必要
     designer.syncData(event.data);
 };
 
