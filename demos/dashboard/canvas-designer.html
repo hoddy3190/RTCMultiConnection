@@ -404,6 +404,7 @@ connection.onstreamended = function(event) {
 
 var conversationPanel = document.getElementById('conversation-panel');
 
+/*
 function appendChatMessage(event, checkmark_id) {
     var div = document.createElement('div');
 
@@ -428,7 +429,7 @@ function appendChatMessage(event, checkmark_id) {
     conversationPanel.scrollTop = conversationPanel.clientHeight;
     conversationPanel.scrollTop = conversationPanel.scrollHeight - conversationPanel.scrollTop;
 }
-
+*/
 var keyPressTimer;
 var numberOfKeys = 0;
 /*
@@ -478,7 +479,7 @@ $('#txt-chat-message').emojioneArea({
     }
 });
 */
-
+/*
 window.onkeyup = function(e) {
     var code = e.keyCode || e.which;
     if (code == 13) {
@@ -505,7 +506,7 @@ document.getElementById('btn-chat-message').onclick = function() {
         typing: false
     });
 };
-
+*/
 /*
 var recentFile;
 document.getElementById('btn-attach-file').onclick = function() {
